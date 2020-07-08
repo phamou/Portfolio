@@ -5,6 +5,8 @@ You can find on this page various programming and data analytics projects that I
 * [Bulldozer Price Predictor](https://phamou.github.io/My-Portfolio/#2-bulldozer-price-predictor)
 * [Heart Disease Predictor](https://phamou.github.io/My-Portfolio/#3-heart-disease-predictor)
 
+You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/) and [GitHub](https://github.com/phamou)! 
+
 # [1. Dog Breed Image Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb)
 ## Overview
 Ever saw a dog, took a snapshot of it and wondered what breed it was? I did... a few too many times. This notebook is to apply deep learning methods to identify the breed of these cute fluffs and present my results through data visualization.
