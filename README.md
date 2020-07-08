@@ -13,7 +13,7 @@ When I see a dog and happen to take a picture of it, I would love to know what b
 * Matplotlib
 
 ### Result visualization 
-![Image of 6 prediction graphs given the probabilities of the top possible breeds and whether it predicted right or wrong](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/extras/result_data.png)
+![Image of 6 prediction graphs given the probabilities of the top possible breeds and whether it predicted right or wrong](https://github.com/phamou/Anh_Vu_Portfolio/blob/master/images/result_data.png)
 
 ### Custom picked images to test external cases
-![Prediction of breed using custom picked images](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/extras/custom_results.png)
+![Prediction of breed using custom picked images](https://github.com/phamou/Anh_Vu_Portfolio/blob/master/images/custom_results.png)
