@@ -31,6 +31,9 @@ The biggest challenge of this project was to convert all data types to numerical
 * Pandas
 * Matplotlib
 
+### Feature importance of price predictor model
+![](/images/feature_importance_bulldozer.png)
+
 
 # [Heart-Disease-Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb)
 ## Overview
@@ -53,3 +56,12 @@ This notebook features many visualization tools to understand possible correlati
 * NumPy
 * Pandas
 * Matplotlib
+
+### Correlation matrix of all the features
+![](/images/correlation_matrix_heart_predictor.png)
+
+### Scatter plot of maximum heart rate and age
+![](/images/age_mhr_correlation.png)
+
+### Bar graph between sex and heart disease frequency
+![](/images/heart_disease_sex_frequency.png)
