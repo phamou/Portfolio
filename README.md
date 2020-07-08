@@ -1,4 +1,4 @@
-# Hi!
+# Hi, I'm Anh Vu! 
 
 You can find on this page various programming and data analytics projects that I've worked on:
 * [Image Dog Breed Classifier](https://phamou.github.io/My-Portfolio/#1-image-dog-breed-classifier)
