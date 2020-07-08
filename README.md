@@ -7,7 +7,7 @@ You can find on this page various programming and data analytics projects that I
 
 # [1. Image Dog Breed Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb)
 ## Overview
-Ever saw a dog, took a snapshot of it and wondered what breed it was? I did... many times. This notebook is to apply deep learning methods to identify the breed of these cute fluffs and present my results through data visualization.
+Ever saw a dog, took a snapshot of it and wondered what breed it was? I did... a few too many times. This notebook is to apply deep learning methods to identify the breed of these cute fluffs and present my results through data visualization.
 
 ## Technologies used:
 * TensorFlow
