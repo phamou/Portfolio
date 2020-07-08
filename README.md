@@ -1,4 +1,5 @@
-# Hi, I'm Anh Vu! 
+# Hi, I'm Anh Vu!
+I'm a student athlete at McGill University studying Statistics and Computer Science.
 
 You can find on this page various programming and data analytics projects that I've worked on:
 * [Dog Breed Image Classifier](https://phamou.github.io/Portfolio/#1-dog-breed-image-classifier)
