@@ -1,7 +1,7 @@
 # Hi, I'm Anh Vu! 
 
 You can find on this page various programming and data analytics projects that I've worked on:
-* [Image Dog Breed Classifier](https://phamou.github.io/My-Portfolio/#1-image-dog-breed-classifier)
+* [Dog Breed Image Classifier](https://phamou.github.io/My-Portfolio/#1-image-dog-breed-classifier)
 * [Bulldozer Price Predictor](https://phamou.github.io/My-Portfolio/#2-bulldozer-price-predictor)
 * [Heart Disease Predictor](https://phamou.github.io/My-Portfolio/#3-heart-disease-predictor)
 
