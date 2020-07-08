@@ -23,7 +23,7 @@ When I see a dog and happen to take a picture of it, I would love to know what b
 ## Overview
 The goal is to predict the sale price of a particular piece of heavy equipment at auction day based on its usage, equipment type, and configuration using regression and time series analysis. 
 
-The biggest challenge of this project was to convert all data types to numerical values in order to be used in our Random Forest Regressor model.
+The biggest challenge of this project was to convert all data types to numerical values in order to be used in the Random Forest Regressor model.
 
 ## Technologies used:
 * Scikit-Learn
@@ -49,7 +49,7 @@ The problem will be divided in these different sections:
 5. Modelling 
 6. Experimentation
 
-This notebook features many visualization tools to understand possible correlations
+This notebook features many visualization tools to understand possible correlations.
 
 ## Technologies used:
 * Scikit-Learn
