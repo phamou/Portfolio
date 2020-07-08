@@ -43,7 +43,7 @@ The biggest challenge of this project was to convert all data types to numerical
 
 # [3. Heart Disease Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb){:target="_blank"}
 ## Overview
-Predicting heart-disease using machine learning (Classification)
+Predicting heart-disease using machine learning (Classification).
 This notebook will look into using Python-based ML and data science libraries in an attempt to build a ML model capable of predicting whether someone has heart disease or not based on their medical record.
 
 The problem will be divided in these different sections:
