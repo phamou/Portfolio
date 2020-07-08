@@ -1,7 +1,7 @@
 # My Portfolio
 We can find on this page my past projects that I worked on to build up my programming and analytics skills. 
 
-# [Image-Dog-Breed-Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb)
+# [1. Image-Dog-Breed-Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb)
 ## Overview
 When I see a dog and happen to take a picture of it, I would love to know what breed it is. This notebook is to apply deep learning methods to identify the breed of these cute fluffs and present my results through data visualization.
 
@@ -19,7 +19,7 @@ When I see a dog and happen to take a picture of it, I would love to know what b
 ![](/images/custom_results.png)
 
 
-# [Bulldozer-Price-Predictor](https://github.com/phamou/Bulldozer-Price-Predictor/blob/master/bulldozer-price-regression.ipynb)
+# [2. Bulldozer-Price-Predictor](https://github.com/phamou/Bulldozer-Price-Predictor/blob/master/bulldozer-price-regression.ipynb)
 ## Overview
 The goal is to predict the sale price of a particular piece of heavy equipment at auction day based on its usage, equipment type, and configuration using regression and time series analysis. 
 
@@ -35,7 +35,7 @@ The biggest challenge of this project was to convert all data types to numerical
 ![](/images/feature_importance_bulldozer.png)
 
 
-# [Heart-Disease-Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb)
+# [3. Heart-Disease-Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb)
 ## Overview
 Predicting heart-disease using machine learning (Classification)
 This notebook will look into using Python-based ML and data science libraries in an attempt to build a ML model capable of predicting whether someone has heart disease or not based on their medical record.
