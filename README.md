@@ -5,7 +5,7 @@ You can find on this page various programming and data analytics projects that I
 * [Bulldozer Price Predictor](https://phamou.github.io/Portfolio/#2-bulldozer-price-predictor)
 * [Heart Disease Predictor](https://phamou.github.io/Portfolio/#3-heart-disease-predictor)
 
-You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/) and [GitHub](https://github.com/phamou)! 
+You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:target="_blank"} and [GitHub](https://github.com/phamou){:target="_blank"}! 
 
 # [1. Dog Breed Image Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb){:target="_blank"}
 ## Overview
