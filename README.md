@@ -1,5 +1,5 @@
 # My Portfolio
-We can find here my past projects that I worked on to build up my skills in programming and analytics. 
+We can find on this page my past projects that I worked on to build up my programming and analytics skills. 
 
 # [Image-Dog-Breed-Classifier](https://github.com/phamou/Image-Dog-Breed-Classifier/blob/master/good-boy-identifier.ipynb)
 ## Overview
