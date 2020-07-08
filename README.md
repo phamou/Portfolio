@@ -13,7 +13,7 @@ When I see a dog and happen to take a picture of it, I would love to know what b
 * Matplotlib
 
 ### Result visualization 
-![Image of 6 prediction graphs given the probabilities of the top possible breeds and whether it predicted right or wrong](/images/result_data.png)
+![](/images/result_data.png)
 
 ### Custom picked images to test external cases
-![Prediction of breed using custom picked images](/images/custom_results.png)
+![](/images/custom_results.png)
