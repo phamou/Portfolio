@@ -5,7 +5,7 @@ You can find on this page various programming and data analytics projects that I
 * [Dog Breed Image Classifier](https://phamou.github.io/Portfolio/#1-dog-breed-image-classifier)
 * [Bulldozer Price Predictor](https://phamou.github.io/Portfolio/#2-bulldozer-price-predictor)
 * [Heart Disease Predictor](https://phamou.github.io/Portfolio/#3-heart-disease-predictor)
-* [Suicide Rates Analysis](https://phamou.github.io/Portfolio/#4-suicide-rates-analysis) (IN PROGRESS)
+* [Suicide Rates Analysis](https://phamou.github.io/Portfolio/#4-suicide-rates-analysis)
 
 You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:target="_blank"} and [GitHub](https://github.com/phamou){:target="_blank"}! 
 
