@@ -76,7 +76,7 @@ This notebook features many visualization tools to understand possible correlati
 
 # [4. Suicide Rates Analysis](https://github.com/phamou/Suicide-Rates-Analysis/blob/master/Suicide-Rate-Analysis.ipynb){:target="_blank"}
 ## Overview (PROJECT IN PROGRESS)
-From star celebrities, respected chefs and renowned designers like Robin Williams, Anthony Bourdain and Kate Spade, I realized that suicidal thoughts do not discrimate based on success. It is even scarier to know that mental health problems can hide in plain sight, even to those suffering from it. Suicide rates have been on the rise in the United States since the 21st century.
+From star celebrities, respected chefs and renowned designers like Robin Williams, Anthony Bourdain and Kate Spade, I realized that suicidal thoughts do not discrimate based on success. It is even scarier to know that mental health problems can hide in plain sight, even to those suffering from it. I came across an article that suicide rates have been on the rise in the United States since the 21st century and it is at its highest since WWII.
 Is Canada as heavily affected by these numbers? Why is there a sudden sharp increase in suicide rates? I hope to be able to learn about the factors influencing the rise in numbers around the world. 
 
 ## Technologies used:
