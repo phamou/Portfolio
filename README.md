@@ -3,9 +3,10 @@ I'm a student athlete at McGill University studying Statistics and Computer Scie
 
 You can find on this page various programming and data analytics projects that I've worked on:
 * [Dog Breed Image Classifier](https://phamou.github.io/Portfolio/#1-dog-breed-image-classifier)
-* [Bulldozer Price Predictor](https://phamou.github.io/Portfolio/#2-bulldozer-price-predictor)
-* [Heart Disease Predictor](https://phamou.github.io/Portfolio/#3-heart-disease-predictor)
-* [Suicide Rates Analysis](https://phamou.github.io/Portfolio/#4-suicide-rates-analysis)
+* [Twitter Sentiment Analysis](https://phamou.github.io/Portfolio/#2-twitter-sentiment-analysis)
+* [Bulldozer Price Predictor](https://phamou.github.io/Portfolio/#3-bulldozer-price-predictor)
+* [Heart Disease Predictor](https://phamou.github.io/Portfolio/#4-heart-disease-predictor)
+* [Suicide Rates Analysis](https://phamou.github.io/Portfolio/#5-suicide-rates-analysis)
 
 You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:target="_blank"} and [GitHub](https://github.com/phamou){:target="_blank"}! 
 
@@ -13,7 +14,7 @@ You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:ta
 ## Overview
 Ever saw a dog, took a snapshot of it and wondered what breed it was? I did... a few too many times. This notebook applies deep learning methods to identify the breed of these cute fluffs and present my results through data visualization.
 
-## Technologies used:
+## Technologies and libraries used:
 * TensorFlow
 * TensorHub (MobileNetV2)
 * NumPy
@@ -27,13 +28,46 @@ Ever saw a dog, took a snapshot of it and wondered what breed it was? I did... a
 ![](/images/custom_results.png)
 
 
-# [2. Bulldozer Price Predictor](https://github.com/phamou/Bulldozer-Price-Predictor/blob/master/bulldozer-price-regression.ipynb){:target="_blank"}
+# [2. Twitter Sentiment Analysis](https://github.com/phamou/Twitter-Sentiment-Analysis/blob/master/Twitter-Sentiment-Analysis.ipynb){:target="_blank"}
+## Overview
+Twitter is known for being extremely volatile. From life updates to strong political opinions, Millions of tweets are posted everyday. Using online datasets of past tweets, I will use NLP to further understand the content on this social media platform.
+
+## Sections:
+* Data Pre-Processing
+* Data Visualization
+* Extracting Features (Word Embedding):
+* Data Modelling:
+* Predicting Test Data Results
+* Conclusion and Thoughts
+
+## Technologies and libraries used:
+* Scikit-Learn 
+* NumPy
+* Pandas
+* Matplotlib
+* WordCloud
+* Seaborn
+
+### WordCloud of common words in negative tweets 
+![](images/negative_tweets.png)
+
+### Top 20 most recurrent words in negative tweets
+![](images/negative_tweet_plot.png)
+
+### Top 20 most recurrent words in positive tweets
+![](images/positive_tweet_plot.png)
+
+### Comparing different models for best results
+![](images/model_comparison_bow.png)
+
+
+# [3. Bulldozer Price Predictor](https://github.com/phamou/Bulldozer-Price-Predictor/blob/master/bulldozer-price-regression.ipynb){:target="_blank"}
 ## Overview
 The goal is to predict the sale price of a particular piece of heavy equipment at auction day based on its usage, equipment type, and configuration using regression and time series analysis. 
 
 The biggest challenge of this project was to convert all data types to numerical values in order to be used in the Random Forest Regressor model.
 
-## Technologies used:
+## Technologies and libraries used:
 * Scikit-Learn
 * NumPy
 * Pandas
@@ -43,7 +77,7 @@ The biggest challenge of this project was to convert all data types to numerical
 ![](/images/feature_importance_bulldozer.png)
 
 
-# [3. Heart Disease Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb){:target="_blank"}
+# [4. Heart Disease Predictor](https://github.com/phamou/Heart-Disease-Predictor/blob/master/heart-disease-classification.ipynb){:target="_blank"}
 ## Overview
 Predicting heart-disease using machine learning (Classification).
 This notebook will look into using Python-based ML and data science libraries in an attempt to build a ML model capable of predicting whether someone has heart disease or not based on their medical record.
@@ -59,7 +93,7 @@ The problem will be divided in these different sections:
 
 This notebook features many visualization tools to understand possible correlations.
 
-## Technologies used:
+## Technologies and libraries used:
 * Scikit-Learn
 * NumPy
 * Pandas
@@ -74,12 +108,12 @@ This notebook features many visualization tools to understand possible correlati
 ### Bar graph between sex and heart disease frequency
 ![](/images/heart_disease_sex_frequency.png)
 
-# [4. Suicide Rates Analysis](https://github.com/phamou/Suicide-Rates-Analysis/blob/master/Suicide-Rate-Analysis.ipynb){:target="_blank"}
+# [5. Suicide Rates Analysis](https://github.com/phamou/Suicide-Rates-Analysis/blob/master/Suicide-Rate-Analysis.ipynb){:target="_blank"}
 ## Overview (PROJECT IN PROGRESS)
 From star celebrities, respected chefs and renowned designers like Robin Williams, Anthony Bourdain and Kate Spade, I realized that suicidal thoughts do not discrimate based on success. It is even scarier to know that mental health problems can hide in plain sight, even to those suffering from it. I came across an article from Time magazine that suicide rates have been on the rise in the United States since the 21st century and it is at its highest since WWII.
 Is Canada as heavily affected by these numbers? Why is there a sudden sharp increase in suicide rates? I hope to be able to learn about the factors influencing the rise in numbers around the world. 
 
-## Technologies used:
+## Technologies and libraries used:
 * Tableau
 * NumPy
 * Pandas
