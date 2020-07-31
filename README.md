@@ -35,8 +35,8 @@ Twitter is known for being extremely volatile. From life updates to strong polit
 ## Sections:
 * Data Pre-Processing
 * Data Visualization
-* Extracting Features (Word Embedding):
-* Data Modelling:
+* Extracting Features (Word Embedding)
+* Data Modelling
 * Predicting Test Data Results
 * Conclusion and Thoughts
 
