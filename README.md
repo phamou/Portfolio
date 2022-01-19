@@ -9,7 +9,7 @@ You can find on this page various programming and data analytics projects that I
 * [Heart Disease Predictor](https://phamou.github.io/Portfolio/#5-heart-disease-predictor)
 * [Suicide Rates Analysis](https://phamou.github.io/Portfolio/#6-suicide-rates-analysis)
 
-You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:target="_blank"} and [GitHub](https://github.com/phamou){:target="_blank"}! 
+You can also find me on [LinkedIn](https://www.linkedin.com/in/anh-vu-pham/){:target="_blank"}, [GitHub](https://github.com/phamou){:target="_blank"} and [Public Tableau](https://public.tableau.com/app/profile/anh.vu.pham/){:target="_blank"}! 
 
 # 1. AI Portfolio 
 ## Overview (IN PROGRESS) 
