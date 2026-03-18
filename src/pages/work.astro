@@ -1,0 +1,160 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+import SectionHeader from '../components/SectionHeader.astro';
+import TagPills from '../components/TagPills.astro';
+import Timeline from '../components/Timeline.astro';
+import Card from '../components/Card.astro';
+
+const workEntries = (await getCollection('work'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const toSlug = (entry: (typeof workEntries)[number]) => (entry.slug ?? entry.id).replace(/\.(md|mdx)$/, '');
+---
+
+<SiteLayout
+  title="Work"
+  description="Impact highlights, toolbox, and how I work across experimentation and product analytics."
+>
+  <section class="space-y-10">
+    <SectionHeader
+      eyebrow="Work"
+      title="Shipping growth with measurement you can trust."
+      subtitle="I focus on instrumentation, experimentation, segmentation, and causal thinking—so teams can make decisions with clarity."
+    />
+
+    <section class="grid gap-4 md:grid-cols-3">
+      <Card>
+        <div class="text-xs text-zinc-400">Impact</div>
+        <div class="mt-2 text-sm font-medium">$10M+ increase in monetary inflows</div>
+        <div class="mt-2 text-sm text-zinc-300">Modeled causal impact of operational SLAs on deposit velocity and churn.</div>
+      </Card>
+      <Card>
+        <div class="text-xs text-zinc-400">Activation</div>
+        <div class="mt-2 text-sm font-medium">30% onboarding drop-off reduction</div>
+        <div class="mt-2 text-sm text-zinc-300">Behavioral funnel analysis to prioritize high-friction UX gaps.</div>
+      </Card>
+      <Card>
+        <div class="text-xs text-zinc-400">Lifecycle</div>
+        <div class="mt-2 text-sm font-medium">13% renewal lift</div>
+        <div class="mt-2 text-sm text-zinc-300">Built onboarding framework using ML on usage data.</div>
+      </Card>
+    </section>
+
+    <section class="grid gap-6 md:grid-cols-12">
+      <div class="space-y-4 md:col-span-7">
+        <h2 class="text-xl font-semibold tracking-tight">Timeline</h2>
+        <Timeline
+          items={[
+            {
+              title: 'Shakepay',
+              subtitle: 'Data Scientist · Aug 2025 – Present · Montreal',
+              accent: 'indigo',
+              bullets: [
+                'Built success metrics and segmentation frameworks for launches; defined actionable growth drivers.',
+                'Improved A/B test outcomes at 100K+ user scale by redesigning event metadata and instrumentation.',
+                'Generated $4M+ quarterly inflows by closing activation gaps with sales-led re-engagement.'
+              ]
+            },
+            {
+              title: 'Autodesk',
+              subtitle: 'Data Analyst · Nov 2022 – Aug 2025 · Montreal',
+              accent: 'indigo',
+              bullets: [
+                'Identified revenue growth opportunities using account attributes and product touchpoints.',
+                'Designed telemetry and reporting to enable experimentation and lifecycle decision-making.',
+                'Found inactivity thresholds correlated with 11% higher churn to guide re-engagement strategies.'
+              ]
+            }
+          ]}
+        />
+      </div>
+
+      <div class="space-y-4 md:col-span-5">
+        <h2 class="text-xl font-semibold tracking-tight">Toolbox</h2>
+        <Card>
+          <TagPills
+            tags={[
+              'SQL',
+              'Python',
+              'Snowflake',
+              'dbt',
+              'PySpark/Snowpark',
+              'Statsig',
+              'PostHog',
+              'Amplitude',
+              'Looker',
+              'Sigma',
+              'Metabase',
+              'Tableau',
+              'Git',
+              'Jira'
+            ]}
+          />
+        </Card>
+
+        <h2 class="text-xl font-semibold tracking-tight">How I work</h2>
+        <div class="grid gap-3">
+          {[
+            {
+              title: 'Instrumentation discipline',
+              body: 'Tight event schemas, metadata standards, and trust in the numbers before optimizing outcomes.'
+            },
+            {
+              title: 'Experiment-first decisions',
+              body: 'Clear hypotheses, success metrics, guardrails, and interpretation that matches business reality.'
+            },
+            {
+              title: 'Causal thinking',
+              body: 'When A/B tests aren’t possible, I model impact with careful assumptions and sensitivity checks.'
+            },
+            {
+              title: 'Team velocity',
+              body: 'Reusable frameworks, clean reporting, and crisp narratives that help teams act quickly.'
+            }
+          ].map((x) => (
+            <Card>
+              <div class="text-sm font-medium">{x.title}</div>
+              <div class="mt-2 text-sm text-zinc-300">{x.body}</div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 class="text-xl font-semibold tracking-tight">Case studies</h2>
+        <div class="text-xs text-zinc-400">{workEntries.length} entries</div>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2">
+        {workEntries.map((entry) => (
+          <a
+            class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
+            href={`/work/${toSlug(entry)}`}
+          >
+            <div class="flex items-center justify-between gap-3">
+              <span class="text-xs text-zinc-400">{entry.data.company ?? 'Work'}</span>
+              <span class="text-xs text-zinc-500">
+                {entry.data.date.toLocaleDateString('en-CA', { year: 'numeric', month: 'short' })}
+              </span>
+            </div>
+            <div class="mt-2 text-lg font-semibold tracking-tight">{entry.data.title}</div>
+            {entry.data.impact?.length ? (
+              <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                {entry.data.impact.slice(0, 2).map((x) => (
+                  <li>{x}</li>
+                ))}
+              </ul>
+            ) : (
+              <div class="mt-3 text-sm text-zinc-300">Read more.</div>
+            )}
+            <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">Read →</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</SiteLayout>
+

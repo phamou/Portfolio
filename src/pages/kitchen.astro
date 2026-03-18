@@ -1,0 +1,74 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+
+const kitchenEntries = (await getCollection('kitchen'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const toSlug = (entry: (typeof kitchenEntries)[number]) => (entry.slug ?? entry.id).replace(/\.(md|mdx)$/, '');
+---
+
+<SiteLayout
+  title="Kitchen"
+  description="A small kitchen lab for coffee, matcha/hōjicha, tea, and cocktails—story-forward experiments with a bit of rigor underneath."
+>
+  <section class="space-y-10">
+    <header class="space-y-3">
+      <p class="text-xs text-zinc-400">Outside of work · Kitchen lab</p>
+      <h1 class="text-balance text-3xl font-semibold tracking-tight md:text-5xl">
+        Ritual, flavor, and small experiments.
+      </h1>
+      <p class="max-w-2xl text-pretty text-zinc-300">
+        I’m most alive when I’m iterating: dialing a coffee, chasing the texture of matcha, or finding the balance point
+        in a cocktail. It’s story first—what I’m chasing, what surprised me—then notes for the next iteration.
+      </p>
+    </header>
+
+    <section class="grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/15 to-transparent p-5">
+        <div class="text-xs text-zinc-400">Track</div>
+        <div class="mt-2 text-sm font-medium">Coffee</div>
+        <div class="mt-2 text-sm text-zinc-300">Extraction, texture, and the quiet moment before the day starts.</div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/15 to-transparent p-5">
+        <div class="text-xs text-zinc-400">Track</div>
+        <div class="mt-2 text-sm font-medium">Matcha · Hōjicha · Tea</div>
+        <div class="mt-2 text-sm text-zinc-300">Temperature, whisking, steep time—tiny changes, big differences.</div>
+      </div>
+      <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-500/15 to-transparent p-5">
+        <div class="text-xs text-zinc-400">Track</div>
+        <div class="mt-2 text-sm font-medium">Cocktails</div>
+        <div class="mt-2 text-sm text-zinc-300">Balance, dilution, aroma—sometimes with tea or coffee as the base.</div>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <h2 class="text-xl font-semibold tracking-tight">Recent stories</h2>
+        <div class="text-xs text-zinc-400">{kitchenEntries.length} entries</div>
+      </div>
+      <div class="grid gap-4 md:grid-cols-3">
+        {kitchenEntries.map((entry) => (
+          <a
+            class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
+            href={`/kitchen/${toSlug(entry)}`}
+          >
+            <div class="flex items-center justify-between gap-3">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-200">
+                {entry.data.category}
+              </span>
+              <span class="text-xs text-zinc-500">
+                {entry.data.date.toLocaleDateString('en-CA', { year: 'numeric', month: 'short' })}
+              </span>
+            </div>
+            <h3 class="mt-4 text-lg font-semibold tracking-tight">{entry.data.title}</h3>
+            <p class="mt-2 text-sm text-zinc-300">{entry.data.oneLiner}</p>
+            <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">Read →</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</SiteLayout>
+

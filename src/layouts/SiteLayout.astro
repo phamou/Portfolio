@@ -1,0 +1,86 @@
+---
+import '../styles/global.css';
+
+type Props = {
+  title: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} · Anh Vu Pham` : 'Anh Vu Pham';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    {description ? <meta name="description" content={description} /> : null}
+  </head>
+  <body class="min-h-dvh bg-zinc-950 text-zinc-50 antialiased">
+    <a
+      href="#content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-zinc-900 focus:px-4 focus:py-2 focus:text-sm focus:text-zinc-50"
+    >
+      Skip to content
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-zinc-950/70 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <a href="/" class="font-semibold tracking-tight hover:text-white">
+          Anh Vu Pham
+        </a>
+        <nav class="hidden items-center gap-6 text-sm text-zinc-300 md:flex">
+          <a class="hover:text-white" href="/work">Work</a>
+          <a class="hover:text-white" href="/athlete">Athlete</a>
+          <a class="hover:text-white" href="/kitchen">Kitchen</a>
+          <a class="hover:text-white" href="/projects">Projects</a>
+          <a
+            class="rounded-full bg-white px-3 py-1.5 font-medium text-zinc-950 hover:bg-zinc-100"
+            href="/resume"
+          >
+            Resume
+          </a>
+        </nav>
+        <nav class="flex items-center gap-3 text-sm text-zinc-300 md:hidden">
+          <a class="hover:text-white" href="/resume">Resume</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="mx-auto max-w-6xl px-4 py-10">
+      <slot />
+    </main>
+
+    <footer class="border-t border-white/10">
+      <div class="mx-auto grid max-w-6xl gap-6 px-4 py-10 text-sm text-zinc-300 md:grid-cols-2">
+        <div class="space-y-2">
+          <div class="font-medium text-zinc-100">Let’s connect</div>
+          <div class="text-zinc-400">
+            Montreal-based Data Scientist. Dragon boat athlete. Coffee/tea & cocktail experimenter.
+          </div>
+        </div>
+        <div class="flex flex-wrap items-start gap-4 md:justify-end">
+          <a class="hover:text-white" href="mailto:anhvupham.ma@gmail.com">Email</a>
+          <a class="hover:text-white" href="https://www.linkedin.com/in/anh-vu-pham/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+          <a class="hover:text-white" href="https://github.com/phamou" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a
+            class="hover:text-white"
+            href="https://public.tableau.com/app/profile/anh.vu.pham/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tableau
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,66 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+
+const projectEntries = (await getCollection('projects'))
+  .filter((e) => !e.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const featured = projectEntries.filter((p) => p.data.kind === 'featured');
+const foundational = projectEntries.filter((p) => p.data.kind === 'foundational');
+---
+
+<SiteLayout title="Projects" description="A curated set of projects, plus foundational ML notebooks.">
+  <section class="space-y-10">
+    <header class="space-y-3">
+      <p class="text-xs text-zinc-400">Projects</p>
+      <h1 class="text-balance text-3xl font-semibold tracking-tight md:text-5xl">A curated set of builds.</h1>
+      <p class="max-w-2xl text-pretty text-zinc-300">
+        A few highlights that reflect how I think: clear problem framing, measurable outcomes, and iteration.
+      </p>
+    </header>
+
+    {featured.length ? (
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold tracking-tight">Featured</h2>
+        <section class="grid gap-4 md:grid-cols-3">
+          {featured.map((p) => (
+            <a
+              class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
+              href={p.data.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div class="text-sm font-medium">{p.data.title}</div>
+              <div class="mt-2 text-sm text-zinc-300">{p.data.description}</div>
+              <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">View →</div>
+            </a>
+          ))}
+        </section>
+      </section>
+    ) : null}
+
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold tracking-tight">Foundational projects</h2>
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-zinc-300">
+        These are earlier projects that still show the foundations: modeling, visualization, and end-to-end notebook work.
+        I’m gradually rewriting the best ones into tighter case-study style pages.
+      </div>
+      <div class="grid gap-4 md:grid-cols-2">
+        {foundational.map((p) => (
+          <a
+            class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
+            href={p.data.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="text-sm font-medium">{p.data.title}</div>
+            <div class="mt-2 text-sm text-zinc-300">{p.data.description}</div>
+            <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">View →</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </section>
+</SiteLayout>
+

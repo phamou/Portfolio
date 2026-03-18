@@ -1,0 +1,23 @@
+---
+type Props = {
+  as?: 'div' | 'a' | 'article';
+  href?: string;
+  class?: string;
+};
+
+const { as = 'div', href, class: className } = Astro.props;
+const Tag = as;
+const base =
+  'rounded-2xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10';
+---
+
+{Tag === 'a' ? (
+  <a class={[base, className].filter(Boolean).join(' ')} href={href}>
+    <slot />
+  </a>
+) : (
+  <Tag class={[base, className].filter(Boolean).join(' ')}>
+    <slot />
+  </Tag>
+)}
+

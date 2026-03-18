@@ -1,0 +1,47 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('work')).filter((e) => !e.data.draft);
+  return entries.map((entry) => {
+    const slug = (entry.slug ?? entry.id).replace(/\.(md|mdx)$/, '');
+    return { params: { slug }, props: { entry } };
+  });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<SiteLayout title={entry.data.title} description={(entry.data.impact?.[0] ?? '').slice(0, 150)}>
+  <article class="space-y-6">
+    <header class="space-y-3">
+      <p class="text-xs text-zinc-400">
+        <a class="hover:text-white" href="/work">Work</a>
+        <span class="px-2 text-zinc-600">/</span>
+        {entry.data.company ?? 'Case study'}
+      </p>
+      <h1 class="text-balance text-3xl font-semibold tracking-tight md:text-5xl">{entry.data.title}</h1>
+      <div class="flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+        <span>
+          {entry.data.date.toLocaleDateString('en-CA', { year: 'numeric', month: 'long' })}
+        </span>
+        {entry.data.role ? <span class="text-zinc-600">•</span> : null}
+        {entry.data.role ? <span>{entry.data.role}</span> : null}
+      </div>
+      {entry.data.impact?.length ? (
+        <ul class="mt-3 list-disc space-y-2 pl-5 text-sm text-zinc-300">
+          {entry.data.impact.map((x) => (
+            <li>{x}</li>
+          ))}
+        </ul>
+      ) : null}
+    </header>
+
+    <div class="prose prose-invert max-w-none prose-p:text-zinc-200 prose-li:text-zinc-200">
+      <Content />
+    </div>
+  </article>
+</SiteLayout>
+

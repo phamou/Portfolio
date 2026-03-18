@@ -1,0 +1,37 @@
+---
+type Props = {
+  href: string;
+  variant?: 'primary' | 'secondary' | 'ghost';
+  target?: string;
+  rel?: string;
+  download?: boolean;
+  class?: string;
+};
+
+const {
+  href,
+  variant = 'secondary',
+  target,
+  rel,
+  download,
+  class: className
+} = Astro.props;
+
+const styles =
+  variant === 'primary'
+    ? 'rounded-full bg-white px-5 py-2.5 text-sm font-medium text-zinc-950 hover:bg-zinc-100'
+    : variant === 'secondary'
+      ? 'rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-zinc-100 hover:bg-white/10'
+      : 'px-2 py-2.5 text-sm text-zinc-300 hover:text-white';
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class={[styles, className].filter(Boolean).join(' ')}
+  download={download}
+>
+  <slot />
+</a>
+
