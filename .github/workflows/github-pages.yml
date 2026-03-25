@@ -28,8 +28,8 @@ jobs:
       - name: Install and build
         env:
           GITHUB_PAGES: 'true'
-          # Must match your GitHub repo name (path on https://<user>.github.io/<repo>/)
-          GITHUB_PAGES_BASE: '/portfolio'
+          # Must match the repo segment in https://<user>.github.io/<repo>/ (this repo is phamou/Portfolio)
+          GITHUB_PAGES_BASE: '/Portfolio'
         run: |
           npm ci
           npm run build

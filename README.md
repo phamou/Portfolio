@@ -49,6 +49,6 @@ This site is **Astro**, not Jekyll. The default GitHub Pages workflow that runs 
 
 1. In the repo: **Settings → Pages → Build and deployment → Source** → choose **GitHub Actions** (not “Deploy from a branch” with Jekyll).
 2. If GitHub created a workflow that uses `jekyll-build-pages`, **delete or disable** it so only `.github/workflows/github-pages.yml` runs.
-3. If your repository name is not `portfolio`, update **`GITHUB_PAGES_BASE`** in that workflow (and keep it in sync with the path under `https://<user>.github.io/<repo>/`).
+3. If your repository name or Pages URL path differs, update **`GITHUB_PAGES_BASE`** in that workflow (must match `https://<user>.github.io/<repo>/`; this repo uses **`/Portfolio`**).
 4. CI sets `GITHUB_PAGES=true` so `astro.config.mjs` applies the correct `site` and `base` for a project Pages URL. On CI, the Vercel adapter is skipped so the output in `dist/` is static files only.
 
