@@ -4,9 +4,10 @@
  */
 export function withBase(path: string): string {
   const base = import.meta.env.BASE_URL;
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`;
   if (path === '' || path === '/') {
-    return base.endsWith('/') ? base : `${base}/`;
+    return normalizedBase;
   }
   const trimmed = path.startsWith('/') ? path.slice(1) : path;
-  return `${base}${trimmed}`;
+  return `${normalizedBase}${trimmed}`;
 }
