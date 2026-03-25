@@ -5,6 +5,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import TagPills from '../components/TagPills.astro';
 import Timeline from '../components/Timeline.astro';
 import Card from '../components/Card.astro';
+import { withBase } from '../utils/withBase';
 
 const workEntries = (await getCollection('work'))
   .filter((e) => !e.data.draft)
@@ -132,7 +133,7 @@ const toSlug = (entry: (typeof workEntries)[number]) => (entry.slug ?? entry.id)
         {workEntries.map((entry) => (
           <a
             class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
-            href={`/work/${toSlug(entry)}`}
+            href={withBase(`/work/${toSlug(entry)}`)}
           >
             <div class="flex items-center justify-between gap-3">
               <span class="text-xs text-zinc-400">{entry.data.company ?? 'Work'}</span>

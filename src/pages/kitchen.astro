@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { getCollection } from 'astro:content';
+import { withBase } from '../utils/withBase';
 
 const kitchenEntries = (await getCollection('kitchen'))
   .filter((e) => !e.data.draft)
@@ -52,7 +53,7 @@ const toSlug = (entry: (typeof kitchenEntries)[number]) => (entry.slug ?? entry.
         {kitchenEntries.map((entry) => (
           <a
             class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
-            href={`/kitchen/${toSlug(entry)}`}
+            href={withBase(`/kitchen/${toSlug(entry)}`)}
           >
             <div class="flex items-center justify-between gap-3">
               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-200">

@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { withBase } from '../../utils/withBase';
 
 export async function getStaticPaths() {
   const entries = (await getCollection('athlete')).filter((e) => !e.data.draft);
@@ -18,7 +19,7 @@ const { Content } = await render(entry);
   <article class="space-y-6">
     <header class="space-y-3">
       <p class="text-xs text-zinc-400">
-        <a class="hover:text-white" href="/athlete">Athlete</a>
+        <a class="hover:text-white" href={withBase('/athlete')}>Athlete</a>
         <span class="px-2 text-zinc-600">/</span>
         {entry.data.type}
       </p>

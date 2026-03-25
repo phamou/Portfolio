@@ -52,3 +52,5 @@ This site is **Astro**, not Jekyll. The default GitHub Pages workflow that runs 
 3. If your repository name or Pages URL path differs, update **`GITHUB_PAGES_BASE`** in that workflow (must match `https://<user>.github.io/<repo>/`; this repo uses **`/Portfolio`**).
 4. CI sets `GITHUB_PAGES=true` so `astro.config.mjs` applies the correct `site` and `base` for a project Pages URL. On CI, the Vercel adapter is skipped so the output in `dist/` is static files only.
 
+**Internal links:** On a project site (`/Portfolio/`), plain `href="/work"` goes to `https://user.github.io/work`. Use `withBase()` from `src/utils/withBase.ts` (or `import.meta.env.BASE_URL`) for in-app routes and local assets.
+

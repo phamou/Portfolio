@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import { getCollection } from 'astro:content';
+import { withBase } from '../utils/withBase';
 
 const athleteEntries = (await getCollection('athlete'))
   .filter((e) => !e.data.draft)
@@ -98,7 +99,7 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
         {athleteEntries.map((entry) => (
           <a
             class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10"
-            href={`/athlete/${toSlug(entry)}`}
+            href={withBase(`/athlete/${toSlug(entry)}`)}
           >
             <div class="flex items-center justify-between gap-3">
               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-200">

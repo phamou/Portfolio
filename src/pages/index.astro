@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Button from '../components/Button.astro';
+import { withBase } from '../utils/withBase';
 ---
 
 <SiteLayout
@@ -23,8 +24,8 @@ import Button from '../components/Button.astro';
           I also run a small kitchen lab for coffee, matcha/hōjicha, tea, and cocktails.
         </p>
         <div class="flex flex-wrap gap-3">
-          <Button href="/resume" variant="primary">Resume</Button>
-          <Button href="/work" variant="secondary">Work highlights</Button>
+          <Button href={withBase('/resume')} variant="primary">Resume</Button>
+          <Button href={withBase('/work')} variant="secondary">Work highlights</Button>
           <Button href="mailto:anhvupham.ma@gmail.com" variant="ghost">Email</Button>
         </div>
       </div>
@@ -46,21 +47,21 @@ import Button from '../components/Button.astro';
     </div>
 
     <section class="grid gap-4 md:grid-cols-3">
-      <a href="/work" class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
+      <a href={withBase('/work')} class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
         <div class="text-sm font-medium">Work</div>
         <div class="mt-2 text-sm text-zinc-300">
           Impact highlights from Shakepay and Autodesk, plus how I work across instrumentation and experiments.
         </div>
         <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">Explore work →</div>
       </a>
-      <a href="/athlete" class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
+      <a href={withBase('/athlete')} class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
         <div class="text-sm font-medium">Dragon boat</div>
         <div class="mt-2 text-sm text-zinc-300">
           Competitiveness with a team-first mindset: pushing my limits while uplifting the crew.
         </div>
         <div class="mt-4 text-xs text-zinc-400 group-hover:text-zinc-200">Explore athlete →</div>
       </a>
-      <a href="/kitchen" class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
+      <a href={withBase('/kitchen')} class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10">
         <div class="text-sm font-medium">Kitchen lab</div>
         <div class="mt-2 text-sm text-zinc-300">
           Coffee, matcha/hōjicha, tea, and cocktails—story-forward experiments with a little rigor underneath.
