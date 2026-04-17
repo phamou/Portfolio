@@ -1,0 +1,106 @@
+---
+import '../styles/home.css';
+import { withBase } from '../utils/withBase';
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} · Anh Vu Pham` : 'Anh Vu Pham — Data Scientist';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    {description ? <meta name="description" content={description} /> : null}
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a
+      href="#content"
+      style="position:absolute;left:-9999px;top:4px;"
+      class="sr-only focus:not-sr-only"
+    >
+      Skip to content
+    </a>
+
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#top" class="brand">Anh Vu <em>Pham</em></a>
+        <div class="nav-links">
+          <a href="#work">Work</a>
+          <a href="#life">Off the clock</a>
+          <a href="#contact" class="cta">Say hi</a>
+          <button id="nav-dark" class="nav-dark" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+            <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="content top">
+      <slot />
+    </main>
+
+    <footer class="foot">
+      <div class="wrap">
+        <span>© 2026 Anh Vu Pham · Made with care in Montreal</span>
+        <span class="mono">v2.0</span>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+
+      // Restore saved theme
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') root.setAttribute('data-theme', 'dark');
+
+      // Nav scroll border
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        nav?.classList.toggle('scrolled', window.scrollY > 12);
+      });
+
+      // Dark mode toggle
+      const btn = document.getElementById('nav-dark');
+      btn?.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      });
+
+      // Scroll reveal
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
