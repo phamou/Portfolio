@@ -1,9 +1,19 @@
-# Portfolio (Astro + Tailwind + Vercel)
+# Anh Vu Pham — Portfolio
+
+**Live site:** https://phamou.github.io/Portfolio/
 
 Modern personal portfolio showcasing:
 - **Work** (impact + case studies)
 - **Outside of work**: **dragon boat** (athlete) + **kitchen lab** (coffee/tea/matcha/hōjicha/cocktails)
 - **Projects** (curated + foundational)
+
+## Recent changes
+
+**Homepage redesign (April 2026)**
+- Replaced dark zinc theme with a warm clay palette and serif type system (Instrument Serif + Geist)
+- New single-page layout: hero with photo avatar, experience cards with company logos, "Off the clock" photo section, and contact section
+- Dark mode toggle in the nav persists preference via `localStorage`
+- Other pages (`/work`, `/athlete`, `/kitchen`, `/projects`) retain the original dark theme
 
 ## Quick start
 
