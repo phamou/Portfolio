@@ -2,7 +2,7 @@
 
 **Live site:** https://phamou.github.io/Portfolio/
 
-Modern personal portfolio showcasing:
+Personal portfolio showcasing:
 - **Work** (impact + case studies)
 - **Outside of work**: **dragon boat** (athlete) + **kitchen lab** (coffee/tea/matcha/hōjicha/cocktails)
 - **Projects** (curated + foundational)
