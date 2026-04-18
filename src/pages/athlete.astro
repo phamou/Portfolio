@@ -21,7 +21,7 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
         Compete at my limit. Make the boat faster.
       </h1>
       <p class="max-w-2xl text-pretty text-zinc-300">
-        I love the edge of racing—training hard, suffering well, and showing up with energy.
+        I love the edge of racing. Training hard, suffering well, and showing up with energy.
         My success in dragon boat only works if everyone around me succeeds too, so I care as much about team lift as I
         do about speed.
       </p>
@@ -36,7 +36,7 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
       <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/15 to-transparent p-5">
         <div class="text-xs text-zinc-400">Theme</div>
         <div class="mt-2 text-sm font-medium">Physical limit</div>
-        <div class="mt-2 text-sm text-zinc-300">I train to find the line—and push past it safely.</div>
+        <div class="mt-2 text-sm text-zinc-300">I train to find the line and push past it safely.</div>
       </div>
       <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-orange-500/15 to-transparent p-5">
         <div class="text-xs text-zinc-400">Theme</div>
@@ -51,11 +51,11 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
         <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
           <div class="text-sm font-medium">Weekly snapshot (example)</div>
           <div class="mt-2 text-sm text-zinc-300">
-            A simple structure I like: on-water technique + power sessions, strength training, aerobic base, and recovery.
+            A simple structure I like: paddling technique and power sessions, strength training, aerobic base, and recovery.
           </div>
           <ul class="mt-4 grid gap-2 text-sm text-zinc-300 md:grid-cols-2">
-            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">On-water: technique under fatigue</li>
-            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">On-water: starts & race pieces</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Paddling: technique under fatigue</li>
+            <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Paddling: starts & race pieces</li>
             <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Strength: pull + hinge + core</li>
             <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Aerobic: steady state</li>
             <li class="rounded-xl border border-white/10 bg-white/5 px-3 py-2">Mobility: shoulders & hips</li>
@@ -65,12 +65,12 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
       </div>
 
       <div class="space-y-4 md:col-span-5">
-        <h2 class="text-xl font-semibold tracking-tight">Team-first competitiveness</h2>
+        <h2 class="text-xl font-semibold tracking-tight">Competing as a team</h2>
         <div class="grid gap-3">
           {[
             {
               title: 'Consistency is contagious',
-              body: 'Show up, train hard, and keep standards high—even when it’s uncomfortable.'
+              body: ‘Show up, train hard, and keep standards high, even when it\u2019s uncomfortable.’
             },
             {
               title: 'Energy and belief',
@@ -78,7 +78,7 @@ const toSlug = (entry: (typeof athleteEntries)[number]) => (entry.slug ?? entry.
             },
             {
               title: 'Make others better',
-              body: 'Feedback, encouragement, and trust—because the boat only moves when we move together.'
+              body: 'Feedback, encouragement, and trust, because the boat only moves when we move together.'
             }
           ].map((x) => (
             <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
