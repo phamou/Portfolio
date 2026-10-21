@@ -28,18 +28,18 @@ const toSlug = (entry: (typeof workEntries)[number]) => (entry.slug ?? entry.id)
     <section class="grid gap-4 md:grid-cols-3">
       <Card>
         <div class="text-xs text-zinc-400">Impact</div>
-        <div class="mt-2 text-sm font-medium">$10M+ increase in monetary inflows</div>
-        <div class="mt-2 text-sm text-zinc-300">Modeled causal impact of operational SLAs on deposit velocity and churn.</div>
+        <div class="mt-2 text-sm font-medium">$4M+ quarterly inflows</div>
+        <div class="mt-2 text-sm text-zinc-300">Showed slow first support replies halved deposits, leading Support to extend hours instead of hiring.</div>
       </Card>
       <Card>
         <div class="text-xs text-zinc-400">Activation</div>
-        <div class="mt-2 text-sm font-medium">30% onboarding drop-off reduction</div>
-        <div class="mt-2 text-sm text-zinc-300">Behavioral funnel analysis to prioritize UX friction points.</div>
+        <div class="mt-2 text-sm font-medium">+3.3pp activation, +$2.4M monthly</div>
+        <div class="mt-2 text-sm text-zinc-300">Cut a 5-step path to first deposit to one prompt, A/B tested with Product.</div>
       </Card>
       <Card>
         <div class="text-xs text-zinc-400">Lifecycle</div>
-        <div class="mt-2 text-sm font-medium">13% renewal lift</div>
-        <div class="mt-2 text-sm text-zinc-300">Built onboarding framework using ML on usage data.</div>
+        <div class="mt-2 text-sm font-medium">13pp renewal lift</div>
+        <div class="mt-2 text-sm text-zinc-300">Used Random Forest on usage data to find the onboarding milestones that predict renewal.</div>
       </Card>
     </section>
 
@@ -50,12 +50,16 @@ const toSlug = (entry: (typeof workEntries)[number]) => (entry.slug ?? entry.id)
           items={[
             {
               title: 'Shakepay',
-              subtitle: 'Data Scientist · Aug 2025 – Present · Montreal',
+              subtitle: 'Data Scientist · Aug 2025 – Aug 2026 · Montreal',
               accent: 'indigo',
               bullets: [
-                'Redesigned the metric system across 1.5M+ customers with a coherent data hierarchy that became the shared foundation for experimentation, GTM motions, and cross-team planning.',
-                'Owned the full experimentation lifecycle across the company, prioritizing high-signal levers through effect sizing and power analysis while standardizing stratified randomization, eligibility tightening, and sequential testing.',
-                'Generated $4M+ quarterly inflows by closing activation gaps through targeted sales outreach.'
+                'Grew quarterly inflows $4M+ by showing that slow first support replies halved deposits, leading Support to extend hours instead of hiring.',
+                'Raised new-customer activation 3.3pp (est. +$2.4M monthly inflows) by cutting a 5-step path to first deposit to one prompt, A/B tested with Product.',
+                'Cut quarterly planning in half by building an inflows North Star metric hierarchy for 1.5M+ customers, now used by Product, Engineering, Marketing, Sales, and Operations for experiments and GTM.',
+                'Standardized experimentation from full rollouts to A/B and multivariate tests, with stratified randomization and sequential vs. fixed-horizon designs.',
+                'Found multi-product customers retained 2x monthly, making weekly multi-product users the company’s growth metric.',
+                'Lifted top-tier loyalty retention 60% → 67% by replacing a lagging tier goal with an actionable leading indicator.',
+                'Cut ad-hoc data requests 50%+ by building AI skills (Codex) that turn PM and engineering ideas into sized A/B test briefs.'
               ]
             },
             {
@@ -63,9 +67,10 @@ const toSlug = (entry: (typeof workEntries)[number]) => (entry.slug ?? entry.id)
               subtitle: 'Data Analyst · Nov 2022 – Aug 2025 · Montreal',
               accent: 'indigo',
               bullets: [
-                'Identified revenue growth opportunities using account attributes and product touchpoints.',
-                'Designed telemetry and reporting to enable experimentation and lifecycle decision-making.',
-                'Found inactivity thresholds correlated with 11% higher churn to guide re-engagement strategies.'
+                'Lifted renewal rate 13pp by using Random Forest on usage data to find the onboarding milestones that predict renewal, adopted by Lifecycle Marketing, Customer Success, and Sales.',
+                'Cut churn 11% by setting inactivity thresholds from usage data and partnering with Marketing to redesign re-engagement campaigns.',
+                'Sized a $20M cross-sell opportunity across 10K+ accounts by showing renewal timing and seat growth, not company size, predicted expansion.',
+                'Scaled A/B testing 5x across cross-functional teams by surfacing renewal signals that became their test hypotheses.'
               ]
             }
           ]}

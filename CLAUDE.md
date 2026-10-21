@@ -2,6 +2,13 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Workflow rules
+
+For every change, follow this process in order:
+
+1. **Verify locally before pushing** — run `PATH="$HOME/.nvm/versions/node/v22.22.2/bin:$PATH" npm run build` and confirm it completes without errors before committing or pushing to production.
+2. **Summarize changes** — after completing any task, provide a clear summary of what was changed and why.
+
 ## Commands
 
 ```bash
